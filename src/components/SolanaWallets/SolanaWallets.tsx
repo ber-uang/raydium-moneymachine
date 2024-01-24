@@ -1,6 +1,5 @@
 import React, { ReactNode, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/router'
-
 import { WalletAdapterNetwork, WalletError, Adapter } from '@solana/wallet-adapter-base'
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
 import {
@@ -25,7 +24,8 @@ import {
   TokenPocketWalletAdapter,
   TorusWalletAdapter,
   TrustWalletAdapter,
-  WalletConnectWalletAdapter
+  WalletConnectWalletAdapter,
+  // UnsafeBurnerWalletAdapter
 } from '@solana/wallet-adapter-wallets'
 import { SolflareWalletAdapter, initialize } from '@solflare-wallet/wallet-adapter'
 import SquadsEmbeddedWalletAdapter, { detectEmbeddedInSquadsIframe } from './SquadsMultisig'
@@ -82,7 +82,8 @@ export function SolanaWalletProviders({ children }: { children?: ReactNode }) {
         }
       }),
       new BraveWalletAdapter(),
-      ...(detectEmbeddedInSquadsIframe() ? [new SquadsEmbeddedWalletAdapter()] : [])
+      ...(detectEmbeddedInSquadsIframe() ? [new SquadsEmbeddedWalletAdapter()] : []),
+      // new UnsafeBurnerWalletAdapter(),
     ],
     [endpoint]
   )

@@ -20,6 +20,7 @@ import { useDocumentScrollActionDetector } from '@/hooks/useScrollActionDetector
 function HomePageContainer({ children }: { children?: ReactNode }) {
   useDocumentScrollActionDetector()
   useDocumentMetaTitle('Raydium')
+
   return (
     <div
       className="flow-root overflow-x-hidden"

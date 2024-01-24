@@ -71,6 +71,7 @@ import { HexAddress, Numberish } from '@/types/constants'
 import { useToken2022SwapConfirmPanel } from '../application/token/useToken2022SwapConfirmPanel'
 import { useSwapTwoElements } from '../hooks/useSwapTwoElements'
 import { useToken2022FeeTooHighWarningChecker } from '../hooks/useToken2022FeeTooHighWarningChecker'
+import { DexScreenPairDetailsEmbedding } from '@/components/DexScreener/PairDetailsEmbed'
 
 function SwapEffect() {
   useSwapInitCoinFiller()
@@ -95,6 +96,8 @@ export default function Swap() {
         <SwapCard />
         {/* <UnwrapWSOL /> */}
         <KLineChart />
+
+        <DexScreenPairDetailsEmbedding pair='FNYueRYEz6hXxwWWnAGxbFLc8tPKZaQpBzqsZHsH8tT' />
       </PageLayout>
     </SwapUIContextProvider>
   )

@@ -5,6 +5,12 @@
   "editor.quickSuggestions": {
     "strings": true // forces VS Code to trigger completions when editing "string" content
   },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "out": true
+  },
   "eslint.validate": ["javascript", "typescript", "html"],
   "eslint.format.enable": true,
   "[json]": {

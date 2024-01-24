@@ -62,11 +62,11 @@ export default function useConnectionInitialization() {
         if (!data) return
 
         // dev test
-        if (!globalThis.location.host.includes('raydium.io')) {
-          Reflect.set(data, 'rpcs', mockRPCConfig.rpcs)
-          Reflect.set(data, 'devrpcs', mockRPCConfig.devrpcs)
-          Reflect.set(data, 'strategy', mockRPCConfig.strategy)
-        }
+        // if (!globalThis.location.host.includes('raydium.io')) {
+        //   Reflect.set(data, 'rpcs', mockRPCConfig.rpcs)
+        //   Reflect.set(data, 'devrpcs', mockRPCConfig.devrpcs)
+        //   Reflect.set(data, 'strategy', mockRPCConfig.strategy)
+        // }
 
         const selectedEndpointUrl = await caculateEndpointUrlByRpcConfig(data)
         const userSelectedRpc = getSessionItem<Endpoint>(SESSION_STORAGE_USER_SELECTED_RPC)

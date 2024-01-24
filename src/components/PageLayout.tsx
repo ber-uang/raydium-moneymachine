@@ -51,6 +51,7 @@ import MessageBoardWidget from './navWidgets/MessageBoardWidget'
 import { TxVersionWidget } from './navWidgets/TxVersionWidget'
 import WalletWidget from './navWidgets/WalletWidget'
 import SetTransactionPriority from '@/pageComponents/settings/SetTransactionPriority'
+import { RequestAirdrop } from './RequestAirdrop'
 
 /**
  * for easier to code and read
@@ -443,6 +444,7 @@ function Navbar({
       </Link>
 
       <Row className="gap-6 items-center mobile:hidden">
+        <RequestAirdrop />
         <MessageBoardWidget />
         <TxVersionWidget />
         <WalletWidget />
@@ -620,7 +622,7 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
             <LinkItem icon="/icons/entry-icon-swap.svg" href="/swap" isCurrentRoutePath={pathname === '/swap'}>
               Swap
             </LinkItem>
-            <LinkItem
+            {/* <LinkItem
               icon="/icons/entry-icon-liquidity.svg"
               href="/liquidity/add"
               isCurrentRoutePath={pathname === '/liquidity/add'}
@@ -633,19 +635,19 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
               isCurrentRoutePath={pathname === '/clmm/pools'}
             >
               Concentrated
-            </LinkItem>
+            </LinkItem> */}
             <LinkItem icon="/icons/entry-icon-pools.svg" href="/pools" isCurrentRoutePath={pathname === '/pools'}>
               Pools
             </LinkItem>
-            <LinkItem icon="/icons/entry-icon-farms.svg" href="/farms" isCurrentRoutePath={pathname === '/farms'}>
-              Farms
-            </LinkItem>
-            <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}>
-              Staking
-            </LinkItem>
-            <LinkItem icon="/icons/entry-icon-acceleraytor.svg" href="/acceleraytor/list">
-              AcceleRaytor
-            </LinkItem>
+            {/* <LinkItem icon="/icons/entry-icon-farms.svg" href="/farms" isCurrentRoutePath={pathname === '/farms'}> */}
+              {/* Farms */}
+            {/* </LinkItem> */}
+            {/* <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}> */}
+              {/* Staking */}
+            {/* </LinkItem> */}
+            {/* <LinkItem icon="/icons/entry-icon-acceleraytor.svg" href="/acceleraytor/list"> */}
+              {/* AcceleRaytor */}
+            {/* </LinkItem> */}
           </div>
 
           <Col className="overflow-scroll no-native-scrollbar">
@@ -653,7 +655,7 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
             <div className="flex-1 overflow-auto no-native-scrollbar mt-2">
               <RpcConnectionPanelSidebarWidget />
               <SettingSidebarWidget />
-              <CommunityPanelSidebarWidget />
+              {/* <CommunityPanelSidebarWidget />
 
               <OptionItem noArrow href="https://raydium.gitbook.io/raydium/" iconSrc="/icons/msic-docs.svg">
                 Docs
@@ -665,7 +667,7 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
 
               <OptionItem noArrow href="https://forms.gle/DvUS4YknduBgu2D7A" iconSrc="/icons/misc-feedback.svg">
                 Feedback
-              </OptionItem>
+              </OptionItem> */}
             </div>
           </Col>
 
