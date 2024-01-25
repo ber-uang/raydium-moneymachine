@@ -640,13 +640,16 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
               Pools
             </LinkItem>
             {/* <LinkItem icon="/icons/entry-icon-farms.svg" href="/farms" isCurrentRoutePath={pathname === '/farms'}> */}
-              {/* Farms */}
+            {/* Farms */}
             {/* </LinkItem> */}
+            <LinkItem icon="/icons/entry-icon-farms.svg" href="/screener" isCurrentRoutePath={pathname === '/screener'}>
+              Screener
+            </LinkItem>
             {/* <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}> */}
-              {/* Staking */}
+            {/* Staking */}
             {/* </LinkItem> */}
             {/* <LinkItem icon="/icons/entry-icon-acceleraytor.svg" href="/acceleraytor/list"> */}
-              {/* AcceleRaytor */}
+            {/* AcceleRaytor */}
             {/* </LinkItem> */}
           </div>
 

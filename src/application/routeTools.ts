@@ -103,6 +103,9 @@ export type PageRouteConfigs = {
   '/clmm/edit-pool-review': {
     queryProps?: any
   }
+  '/screener': {
+    queryProps?: any
+  }
 }
 
 export type PageRouteName = keyof PageRouteConfigs
